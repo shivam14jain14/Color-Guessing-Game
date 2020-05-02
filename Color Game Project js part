@@ -1,0 +1,183 @@
+ var numsq = 6;
+ var arr = generaterandomcolors(numsq);
+
+       var wincolor = randomno();
+       console.log(wincolor);
+       var d = document.getElementById("s");
+       d.textContent = wincolor;
+       var c = document.querySelector("h1");
+       var h = document.getElementById("message");
+
+       var b = document.getElementById("n");
+       var y = document.getElementById("easybtn");
+       var z = document.getElementById("hardbtn");
+       y.addEventListener("click",function()
+       {
+            
+           y.style.background = "pink";
+           z.style.background = "white";
+           y.style.color  = "white";
+           z.style.color = "pink";
+             numsq = 3;
+             arr = generaterandomcolors(numsq);
+              wincolor = randomno();
+                  d.textContent = wincolor;
+                  s = document.getElementsByClassName("square");
+                for(var i = 0; i<s.length; i++)
+                {
+                	if(arr[i])
+                	{
+                		s[i].style.background = arr[i];
+                	}
+                	else
+                	{
+                		s[i].style.background = "none";
+                	}
+                }
+
+       });
+       z.addEventListener("click",function()
+       {
+
+       	 z.style.background = "pink";
+           y.style.background = "white";
+           z.style.color  = "white";
+           y.style.color = "pink";
+          
+           numsq = 6;
+           arr = generaterandomcolors(numsq);
+              wincolor = randomno();
+                  d.textContent = wincolor;
+                                    s = document.getElementsByClassName("square");
+                for(var i = 0; i<s.length; i++)
+                {
+                	
+                		s[i].style.background = arr[i];
+         
+                		//s[i].style.background = "block";
+                	
+                }
+
+                 
+
+       });
+
+       b.addEventListener("mouseover", function()
+       {
+            b.style.background = "pink";
+            b.style.color = "white";
+           
+
+       });
+        b.addEventListener("mouseout", function()
+       {
+            
+            b.style.background = "white";
+            b.style.color = "pink";
+            
+       });
+       //   y.addEventListener("mouseover", function()
+       // {
+       //      y.style.background = "pink";
+       //      y.style.color = "white";
+           
+
+       // });
+       //  y.addEventListener("mouseout", function()
+       // {
+            
+       //      y.style.background = "white";
+       //      y.style.color = "pink";
+            
+       // });
+       //   z.addEventListener("mouseover", function()
+       // {
+       //      z.style.background = "pink";
+       //      z.style.color = "white";
+           
+
+       // });
+       //  z.addEventListener("mouseout", function()
+       // {
+            
+       //      z.style.background = "white";
+       //      z.style.color = "pink";
+            
+       // });
+      b.addEventListener("click",function()
+      {  
+      	  c.style.background = "pink";
+      	b.textContent = "NEW COLORS";
+      	h.textContent = " ";
+
+    arr = generaterandomcolors(numsq);
+    wincolor = randomno();
+    d.textContent = wincolor;
+    for(var i = 0; i<s.length; i++)
+     { 
+     	
+     	s[i].style.background = arr[i];
+
+     }   
+      });
+                    
+     var s = document.getElementsByClassName("square");
+     for(var i = 0; i<s.length; i++)
+     { 
+     	
+     	s[i].style.background = arr[i];
+
+     }   
+       for(var i = 0; i<s.length; i++)
+     { 
+     	
+     	 s[i].addEventListener("click",function()
+     	{ 
+     		var o = this.style.background;
+     	
+             if(o === wincolor)
+             { h.textContent = "Correct";
+              b.textContent = "Play Again ?";
+
+             	 for(var j = 0; j<arr.length; j++)
+             	 { 
+
+             	 	s[j].style.background = wincolor;
+             	 }
+             	 c.style.background = wincolor;
+
+             	
+             }
+             else
+             { 
+             	h.textContent = "Try Again";
+                       this.style.background = "#232323";
+             }
+     	});      
+
+     }  
+     function randomno()
+     {
+         var r = Math.floor(Math.random() * arr.length);
+         return arr[r];
+     } 
+
+     function generaterandomcolors(num){
+
+      var ar = [];
+      for(var e = 0; e<num; e++)
+      {
+      var w = randomnumber();
+      ar.push(w);
+  } 
+
+      return ar;
+     }
+     function randomnumber()
+     {
+     	 var red = Math.floor(Math.random() * 256);
+     	  var green = Math.floor(Math.random() * 256);
+     	   var blue = Math.floor(Math.random() * 256);
+     	  return  "rgb(" + red + ", " + green + ", " + blue + ")";
+     }
+    
