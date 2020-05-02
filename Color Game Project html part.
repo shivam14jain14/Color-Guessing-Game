@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colorgame
+	</title>
+	<link rel="stylesheet" type="text/css" href="colorgameproject.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+</head>
+<body>
+	<object width="400" height="400" data="helloworld.swf"></object>
+	<h1 id="color">THE GREAT</br> <span id="s">RGB</span> </br> <span id="hb">GUESSING GAME</span></h1>
+	<!-- <div class="container">
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="#">NEW COLORS</a>
+   
+       
+    </nav></div> -->
+    <div id="kn" >
+           <button id="n">NEW COLORS</button> 
+           <span id="message"></span>
+           <button id="easybtn">EASY</button> 
+           <button id="hardbtn"class="sel">HARD</button> 
+    </div>
+	<div id="special">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		
+	</div>
+<script type="text/javascript" src="colorgameproject1.js"></script>
+</body>
+</html>
